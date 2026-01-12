@@ -9,15 +9,15 @@
 <body>
     @foreach ($products as $product)      
     <div id="edit-{{ $product->id }}" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-6 rounded-lg w-1/3 shadow-lg">
+        <div class="bg-white p-6 rounded-lg w-[400px] sm:w-1/3 shadow-lg">
             <h2 class="text-xl font-bold mb-4">Editar Produto</h2>
             <form action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT') <!-- Define o método como PUT -->
                 <div class="mb-2 flex justify-between items-center">
-                    <div class="flex items-center">
+                    <div class="flex w-full items-center flex-col-reverse sm:flex-row">
                         <input type="file" name="photo" placeholder="Photo" class="border p-2 w-full mb-2 rounded">
-                        <img src="{{ asset('storage/' . $product->photo) }}" alt="Foto do produto" class="w-12 h-12 rounded-full object-cover ml-4">
+                        <img src="{{ asset('storage/' . $product->photo) }}" alt="Foto do produto" class=" w-[150px] h-[150px] sm:w-12 sm:h-12 mb-[10px] sm:mb-0 rounded-full sm:ml-4">
                     </div>path: 
                 </div>
                 <input type="text" name="name" placeholder="Name" class="border p-2 w-full mb-2 rounded" value="{{ $product->name }}" required>
