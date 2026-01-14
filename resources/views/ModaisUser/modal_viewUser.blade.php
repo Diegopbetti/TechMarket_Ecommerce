@@ -1,7 +1,7 @@
 <body>
     @foreach ($users as $user)       
     <div id="view-{{ $user->id }}" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-6 rounded-lg w-1/3 shadow-lg">
+        <div class="bg-white p-6 rounded-lg w-[400px] sm:w-1/3 shadow-lg">
             <h2 class="text-xl font-bold mb-4">Visualizar Usuário</h2>
                 <input type="text" placeholder="Name" class="border p-2 w-full mb-2 rounded" value="{{$user->name}}" readonly>
                 <input type="email" placeholder="Email" class="border p-2 w-full mb-2 rounded" value="{{$user->email}}" readonly>

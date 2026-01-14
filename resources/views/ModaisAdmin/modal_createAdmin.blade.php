@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="create" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-6 rounded-lg w-1/3 shadow-lg">
+        <div class="bg-white p-6 rounded-lg w-[400px] sm:w-1/3 shadow-lg">
             <h2 class="text-xl font-bold mb-4">Criar Admin</h2>
             <form action="{{ route('admin.store') }}" method="POST" enctype="multipart/form-data">
             @csrf

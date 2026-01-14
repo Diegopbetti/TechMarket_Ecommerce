@@ -9,7 +9,7 @@
 <body>
     @foreach ($admins as $admin)       
     <div id="edit-{{ $admin->id }}" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-6 rounded-lg w-1/3 shadow-lg">
+        <div class="bg-white p-6 rounded-lg w-[400px] sm:w-1/3 shadow-lg">
             <h2 class="text-xl font-bold mb-4">Editar Admin</h2>
             <form action="{{ route('admin.update', $admin->id) }}" method="POST" enctype="multipart/form-data">
             @csrf

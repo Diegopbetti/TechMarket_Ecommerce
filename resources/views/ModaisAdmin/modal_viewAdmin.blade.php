@@ -9,7 +9,7 @@
 <body>
     @foreach ($admins as $admin)       
     <div id="view-{{ $admin->id }}" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-6 rounded-lg w-1/3 shadow-lg">
+        <div class="bg-white p-6 rounded-lg w-[400px] sm:w-1/3 shadow-lg">
             <h2 class="text-xl font-bold mb-4">Visualizar Admin</h2>
                 <input type="text" placeholder="Name" class="border p-2 w-full mb-2 rounded" value="{{$admin->name}}" readonly>
                 <input type="email" placeholder="Email" class="border p-2 w-full mb-2 rounded" value="{{$admin->email}}" readonly>
@@ -20,8 +20,8 @@
                     <input type="date" placeholder="Birth date" class="border p-2 w-1/3 mb-2 rounded" value="{{$admin->birth_date}}" readonly>
                     <input type="text" placeholder="CPF" class="border p-2 w-2/3 mb-2 rounded" value="{{$admin->cpf}}" readonly>
                 </div>
-                <div class="mb-2 flex justify-between items-center">
-                    <div class="flex items-center">
+                <div class="mb-2 w-full flex sm:flex-row flex-col justify-between items-center">
+                    <div class="flex items-center mb-[10px]">
                         <label class="block text-sm font-medium text-gray-700">Foto</label>
                         <img src="{{ asset('storage/' . $admin->photo) }}" alt="Foto do usuário" class="w-12 h-12 rounded-full object-cover ml-4">
                     </div>
