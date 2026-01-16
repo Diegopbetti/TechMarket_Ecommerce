@@ -18,7 +18,8 @@ export default {
                 ms: '320px',
                 hm: '820px',
                 sm: '640px',
-                mm: '500px'
+                mm: '500px',
+                mt: '420px'
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],

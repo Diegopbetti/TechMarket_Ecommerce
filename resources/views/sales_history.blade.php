@@ -13,13 +13,14 @@
             Histórico de vendas        
         </div>
         <div class="max-w-[1058px] w-full flex flex-col items-center mb-6">
-            <form method="GET" action="{{ route('vendas.pdf') }}" target="_blank" class="flex space-x-4 items-center">
+            <form method="GET" action="{{ route('vendas.pdf') }}" target="_blank" class="flex flex-col gap-[20px] sm:flex-row space-x-4 items-center">
+                <div class="flex flex-col mt:flex-row">
                 <label for="start_date" class="text-blue-950 font-medium">Início:</label>
                 <input type="date" name="start_date" id="start_date" class="border rounded p-1 text-black">
                 
                 <label for="end_date" class="text-blue-950 font-medium">Fim:</label>
                 <input type="date" name="end_date" id="end_date" class="border rounded p-1 text-black">
-                
+                </div>
                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md transition-transform duration-300 hover:scale-110">
                     Gerar PDF
                 </button>
