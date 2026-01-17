@@ -30,7 +30,7 @@
                         <td class="px-3 py-2 text-center text-black">
                             <form action="{{ route('withdraw.process') }}" method="POST">
                                 @csrf
-                                <input type="number" name="value" min="0.01" step="0.01" required>
+                                <input type="number" name="value" class="w-[50px] mt:w-[150px] hm:w-[200px]"  min="0.01" step="0.01" required>
                         </td>
                     </tr>
                 </tbody>
