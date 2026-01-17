@@ -4,9 +4,16 @@
     Desafio Laravel 2025.1
 </h1>
 
-## Sobre o desafio
+## Sobre o projeto
 
-O desafio tem como intuito treinar os novos membros da Code Jr., afim de familiarizarem melhor com o framework Laravel desenvolvendo um e-commerce de produtos eletrônicos, com as funcionalidades definidas no documento de requisitos disponibilizado.
+Membros:
+Miguel de Deus Oliveira
+Diego Pereira Betti
+Rafael Amaral
+Gabriel dos Reis Cunha
+Bruno Keil
+
+
 
 ## Como executar o projeto
 
