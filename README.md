@@ -7,11 +7,11 @@
 ## Sobre o projeto
 
 Membros:
-Miguel de Deus Oliveira
-Diego Pereira Betti
-Rafael Amaral
-Gabriel dos Reis Cunha
-Bruno Keil
+- Miguel de Deus Oliveira
+- Diego Pereira Betti
+- Rafael Amaral
+- Gabriel dos Reis Cunha
+- Bruno Keil
 
 
 
