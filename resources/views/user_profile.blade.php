@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-    <div class="bg-white p-8 rounded-lg shadow-lg w-1/3">
+    <div class="bg-white p-8 rounded-lg shadow-lg  mm:w-fit lg:w-1/3">
         <h2 class="text-2xl font-bold mb-6 text-center">Perfil do Usuário</h2>
         
         <div class="space-y-4">
