@@ -31,7 +31,7 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-11/12 sm:w-5/6 lg:w-1/2 mt-12 px-4 sm:px-0">
         @foreach($products as $product)
-        <div class="flex flex-col items-center bg-blue-950 w-full sm:w-48 rounded-xl p-3 mx-auto">
+        <div class="flex flex-col items-center bg-blue-950 w-full w-[220px] sm:w-48 rounded-xl p-3 mx-auto">
             <img src="{{ asset('storage/' . $product->photo) }}" alt="{{$product->name}}" class="w-full sm:w-48 h-40 rounded-xl object-contain">
             <div class="flex flex-col w-full text-white mt-3">
                 <div class="flex justify-between items-center w-full">
