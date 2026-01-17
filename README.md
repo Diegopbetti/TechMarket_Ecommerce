@@ -1,12 +1,19 @@
 <p align="center"><a href="https://codejr.com.br/" target="_blank"><img src="https://codejr.com.br/wp-content/uploads/elementor/thumbs/Da-uma-olhada-no-design-que-eu-fiz-no-Canva-e1631206678162-pcvbl6lcx3mwo97eg0q4yn4zchcokysbd7aoauowe8.png" width="750" alt="Code"></a></p>
 
 <h1 align="center">
-    Desafio Laravel 2025.1
+    Trabalho Final - Modelagem de Sistemas
 </h1>
 
-## Sobre o desafio
+## Sobre o projeto
 
-O desafio tem como intuito treinar os novos membros da Code Jr., afim de familiarizarem melhor com o framework Laravel desenvolvendo um e-commerce de produtos eletrônicos, com as funcionalidades definidas no documento de requisitos disponibilizado.
+Membros:
+- Miguel de Deus Oliveira
+- Diego Pereira Betti
+- Rafael Amaral
+- Gabriel dos Reis Cunha
+- Bruno Keil
+
+
 
 ## Como executar o projeto
 
