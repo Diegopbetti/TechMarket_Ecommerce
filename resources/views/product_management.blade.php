@@ -27,8 +27,8 @@
                     <tr class="bg-[#237ecd] text-white">
                         <th class="px-3 py-2 text-center">Id</th>
                         <th class="px-3 py-2 text-center">Name</th>
-                        <th class="px-3 py-2 text-center">Category</th>
-                        <th class="px-3 py-2 text-center">User</th>
+                        <th class="px-3 py-2 text-center hidden lg:table-cell">Category</th>
+                        <th class="px-3 py-2 text-center hidden sm:table-cell">User</th>
                         <th class="px-3 py-2 text-center">View</th>
                         <th class="px-3 py-2 text-center">Edit</th>
                         <th class="px-3 py-2 text-center">Delete</th>
@@ -39,8 +39,8 @@
                     <tr class="border-b border-gray-600">
                         <td class="px-3 py-2 text-center">{{ $product->id }}</td>
                         <td class="px-3 py-2 text-center">{{ $product->name }}</td>
-                        <td class="px-3 py-2 text-center">{{ $product->category }}</td>
-                        <td class="px-3 py-2 text-center">{{ $product->announcer->name }}</td>
+                        <td class="px-3 py-2 text-center hidden lg:table-cell">{{ $product->category }}</td>
+                        <td class="px-3 py-2 text-center hidden sm:table-cell">{{ $product->announcer->name }}</td>
                         <th class="px-3 py-2 text-center"><button class="btn-acao bg-[#00AEA0] inline-flex items-center justify-center w-[20px] h-[20px] rounded-md border-none mt-1 cursor-pointer" onclick="abrirModal('view-{{ $product->id }}')"></button></th>
                         <th class="px-3 py-2 text-center"><button class="btn-acao bg-[#FFC739] inline-flex items-center justify-center w-[20px] h-[20px] rounded-md border-none mt-1 cursor-pointer" onclick="abrirModal('edit-{{ $product->id }}')"></button></th>
                         <th class="px-3 py-2 text-center"><button class="btn-acao bg-[#C70E3C] inline-flex items-center justify-center w-[20px] h-[20px] rounded-md border-none mt-1 cursor-pointer" onclick="abrirModal('delete-{{$product->id}}')"></button></th>                     
