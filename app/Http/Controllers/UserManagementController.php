@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
 
@@ -14,6 +15,17 @@ class UserManagementController extends Controller
     }
 
     public function store(Request $request){
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email',
+            'password' => 'required|string|min:8',
+            'address' => 'nullable|string|max:255',
+            'telephone' => 'nullable|string|max:20',
+            'birth_date' => 'nullable|date',
+            'cpf' => 'nullable|string|max:14',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+    
         if ($request->hasFile('photo')) {
             $photoPath = $request->file('photo')->store('images/users', 'public');
         } else {
@@ -44,7 +56,7 @@ class UserManagementController extends Controller
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->email = $request->email;
         $user->address = $request->address;
@@ -53,6 +65,9 @@ class UserManagementController extends Controller
         $user->cpf = $request->cpf; 
 
         if ($request->hasFile('photo')) {
+            if ($user->photo && Storage::disk('public')->exists($user->photo)) {
+                Storage::disk('public')->delete($user->photo);
+            }
             $photoPath = $request->file('photo')->store('images/users', 'public');
             $user->photo = $photoPath;
         }
@@ -62,7 +77,7 @@ class UserManagementController extends Controller
     }
 
     public function destroy($id){
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $user->delete();
 
         return redirect()->route('user_management');

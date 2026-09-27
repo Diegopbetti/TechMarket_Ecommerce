@@ -48,14 +48,19 @@ class ProductManagementController extends Controller
             'description' => 'required|string', 
         ]);
 
-        $product = Product::find($id);
+        $product = Product::findOrFail($id);
+
+        if($product->announcer_id !== auth()->id()){
+            abort(403, 'Você não tem permissão para editar este produto.');
+        }
+
         $product->name = $request->name;
         $product->category = $request->category;
         $product->price = $request->price;
         $product->description = $request->description;
 
         if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('images/products', 'public');
+            $photoPath = $request->file('photo')->store('product_images', 'public');
             $product->photo = $photoPath;
         }
 
@@ -65,7 +70,12 @@ class ProductManagementController extends Controller
     }
 
     public function destroy($id){
-        $product = Product::find($id);
+        $product = Product::findOrFail($id);
+
+        if($product->announcer_id !== auth()->id()){
+            abort(403, 'Você não tem permissão para excçuir este produto.');
+        }
+
         $product->delete();
 
         return redirect()->route('product_management');
