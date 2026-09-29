@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body>
-    <main class="h-screen w-full bg-white flex flex-col justify-center items-center">
+<x-app-layout>
+    <main class="h-full w-full bg-white flex flex-col justify-center items-center">
         <!-- Cabeçalho -->
         <div class="flex items-center justify-between max-w-[1058px] w-full">
             <h1 class=" text-white text-[24px] bg-blue-950 px-[10%] py-[1%] rounded-[20px] mb-5 whitespace-nowrap">
@@ -85,5 +77,4 @@
             document.getElementById(idModal).style.display = "none";
         }
     </script>
-</body>
-</html>
+</x-app-layout>
